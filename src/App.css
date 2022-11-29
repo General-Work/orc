@@ -1,5 +1,19 @@
+@font-face {
+    font-family: Poppins-Regular;
+    src: url("./fonts/poppins/Poppins-Regular.ttf");
+}
+
+html {
+    font-family: Poppins-Regular, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 .linkitem {
     position: relative;
+    z-index: 20;
 }
 
 .linkitem::after {
@@ -8,19 +22,20 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: white;
+    background-color: #e5e5e5;
     width: 100%;
-    height: 2px;
+    height: 100%;
     display: none;
+    z-index: -1;
     animation: animwidth 300ms;
 }
 
 @keyframes animwidth {
     0% {
-        width: 0%;
+        height: -0%;
     }
     100% {
-        width: 100%;
+        height: -100%;
     }
 }
 
@@ -35,25 +50,68 @@
     background-repeat: repeat;
 }
 
-.splide__progress {
-    all: revert;
+[data-aos="animate-scale-bit"] {
+    -webkit-animation: zoomInUp 9s;
+    -moz-animation: zoomInUp 9s;
+    -o-animation: zoomInUp 9s;
+    animation: zoomInUp 9s;
 }
 
-.splide__progress {
-    background: #ccc;
+@keyframes zoomInUp {
+    0% {
+        opacity: 0.7;
+        transform: translateX(100%);
+    }
+    15% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.1) translateX(-5%);
+    }
 }
 
-.splide__progress-bar {
-    background: greenyellow;
-    height: 2px;
-    transition: width 400ms ease;
-    width: 0;
+[data-aos="my-fade-right"] {
+    -webkit-animation: myfade 9s infinite;
+    -moz-animation: myfade 9s infinite;
+    -o-animation: myfade 9s infinite;
+    animation: myfade 9s infinite;
+    transition-property: transform, opacity;
+}
+
+@keyframes myfade {
+    0% {
+        transform: translateX(-10%);
+    }
+    15% {
+        transform: translateX(0);
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.8;
+        transform: translateX(-3%)
+    }
+    100% {
+        opacity: 0.2;
+        transform: translateX(-10%)
+    }
 }
 
 .addpadding {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
 }
+
 .map-container-2 {
     height: 500px;
 }

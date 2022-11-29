@@ -30,8 +30,6 @@ function App() {
         <Route path="/auth"  element={<AppLogin/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="*" element={<PageNotFound/>} />
-  
-        
       </Routes>
     </LoadingContext.Provider>
   )
