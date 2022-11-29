@@ -1,0 +1,59 @@
+.linkitem {
+    position: relative;
+}
+
+.linkitem::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    height: 2px;
+    display: none;
+    animation: animwidth 300ms;
+}
+
+@keyframes animwidth {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.linkitem:hover::after {
+    display: block;
+}
+
+.dotted-bg {
+    background-image: radial-gradient(#4f46e5 1%, transparent 5%), radial-gradient(#4f46e5 1%, transparent 5%);
+    background-size: 30px 30px;
+    background-position: 0 0, 30px 30px;
+    background-repeat: repeat;
+}
+
+.splide__progress {
+    all: revert;
+}
+
+.splide__progress {
+    background: #ccc;
+}
+
+.splide__progress-bar {
+    background: greenyellow;
+    height: 2px;
+    transition: width 400ms ease;
+    width: 0;
+}
+
+.addpadding {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+.map-container-2 {
+    height: 500px;
+}
