@@ -6,7 +6,6 @@ import Faq from '../../components/layout/landingPage/Faq'
 export default function Home() {
   return (
     <div>
-      go to home
         <Hero />
         <Sectionourmission/>
         <Faq />
