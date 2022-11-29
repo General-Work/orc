@@ -8,6 +8,8 @@ import Services from "./pages/landingPage/Services"
 import Dashboard from "./pages/clients/dashboard"
 import Contact from './pages/landingPage/Contact'
 import PageNotFound from "./pages/pageNotFound"
+import Layout from "./pages/clients/layout"
+import BusinessRegistration from "./pages/clients/businessRegistration"
 
 export const LoadingContext = createContext()
 
@@ -28,7 +30,10 @@ function App() {
           <Route path="/services" element={<Services/>} />
         </Route>
         <Route path="/auth"  element={<AppLogin/>}/>
-        <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route element={<Layout/>}>
+          <Route path="/dashboard" element={<Dashboard/>}/>
+          <Route path="/businessregistration/:id" element={<BusinessRegistration/>}/>
+        </Route>
         <Route path="*" element={<PageNotFound/>} />
       </Routes>
     </LoadingContext.Provider>
