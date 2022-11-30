@@ -27,7 +27,7 @@ const Dashboard = () => {
 
   return (
     < >
-        <div className='sticky top-16 z-30 bg-slate-50'>
+        <div className='sticky top-16 z-30 bg-gray-200'>
          
           <div className='grid justify-center text-lg md:text-[35px] pt-10 pb-4 font-semibold text-gray-500 text-center mx-4 sm:mx-8 md:mx-12 lg:mx-16 xl:mx-32'>
             Access all our services by clicking on any of the options below... 

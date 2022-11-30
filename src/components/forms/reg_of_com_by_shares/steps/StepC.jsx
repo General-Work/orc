@@ -1,7 +1,7 @@
 import React from 'react'
-import FormHelpInscription from '../../../../components/alerts/FormHelpInscription'
-import FormInformativeInscriptions from '../../../../components/alerts/FormInformativeInscriptions';
-import FormInputText from '../../../../components/inputs/FormInputText'
+import FormHelpInscription from '../../../alerts/FormHelpInscription'
+import FormInformativeInscriptions from '../../../alerts/FormInformativeInscriptions';
+import FormInputText from '../../../inputs/FormInputText'
 import TextareaAutosize from '@mui/base/TextareaAutosize';
 
 export default function StepC() {

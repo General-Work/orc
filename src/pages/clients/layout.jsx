@@ -4,12 +4,12 @@ import {Outlet} from 'react-router-dom'
 
 const Layout = () => {
   return (
-    <div className='bg-gray-50 min-w-screen min-h-screen  '>
+    <div className='bg-gray-200 min-w-screen min-h-screen  '>
         <PageHeader/>
 
-        <>
+        <div className='h-full'>
             <Outlet />
-        </>
+        </div>
       
     </div>
   )

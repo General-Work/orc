@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLocationForm } from './StepE'
-import FormInformativeInscriptions from '../../../../components/alerts/FormInformativeInscriptions'
+import FormInformativeInscriptions from '../../../alerts/FormInformativeInscriptions'
 
 
 

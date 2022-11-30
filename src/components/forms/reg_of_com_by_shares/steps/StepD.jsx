@@ -1,6 +1,6 @@
 import React from 'react'
 import TextareaAutosize from '@mui/base/TextareaAutosize';
-import FormInformativeInscriptions from '../../../../components/alerts/FormInformativeInscriptions';
+import FormInformativeInscriptions from '../../../alerts/FormInformativeInscriptions';
 
 export default function StepD() {
     return (

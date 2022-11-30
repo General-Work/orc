@@ -1,7 +1,7 @@
 import React from 'react'
-import FormInputText from '../../../../components/inputs/FormInputText'
-import FormInformativeInscriptions from '../../../../components/alerts/FormInformativeInscriptions'
-import FormHelpInscription from '../../../../components/alerts/FormHelpInscription'
+import FormInputText from '../../../inputs/FormInputText'
+import FormInformativeInscriptions from '../../../alerts/FormInformativeInscriptions'
+import FormHelpInscription from '../../../alerts/FormHelpInscription'
 
 export function useLocationForm(){
     return <div className='flex flex-col gap-5'>

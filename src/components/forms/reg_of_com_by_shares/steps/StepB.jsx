@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import FormInputText from '../../../../components/inputs/FormInputText'
-import FormHelpInscription from '../../../../components/alerts/FormHelpInscription'
+import FormInputText from '../../../inputs/FormInputText'
+import FormHelpInscription from '../../../alerts/FormHelpInscription'
 import CheckIcon from '@mui/icons-material/Check';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 export default function StepB() {

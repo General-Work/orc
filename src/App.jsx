@@ -11,10 +11,6 @@ import PageNotFound from "./pages/pageNotFound"
 import Layout from "./pages/clients/layout"
 import BusinessRegistration from "./pages/clients/businessRegistration"
 
-
-import Forms from './pages/Forms/index'
-import RegisterAcompanyWithShares from './pages/Forms/Register_a_company_with_shares/Index'
-
 export const LoadingContext = createContext()
 
 function App() {
@@ -39,9 +35,7 @@ function App() {
           <Route path="/businessregistration/:id" element={<BusinessRegistration/>}/>
         </Route>
         <Route path="*" element={<PageNotFound/>} />
-        <Route element={<Forms/>}>
-        <Route  path="/forms/registeracompanywithshares" element={<RegisterAcompanyWithShares/>}/>
-        </Route>
+        
       </Routes>
         
     </LoadingContext.Provider>
