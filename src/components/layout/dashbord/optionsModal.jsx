@@ -6,11 +6,17 @@ import Dialog from '@mui/material/Dialog';
 import { MenuItem } from '@mui/material';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import AddTaskIcon from '@mui/icons-material/AddTask';
+import { useNavigate } from 'react-router-dom';
 
 const OptionsModal = (props) => {
-    const {open, setOpen} = props
+    const {open, selectedService, onClose} = props
+    const navigate = useNavigate()
+
+    const goToFormPage = (val) => {
+        navigate(`/businessregistration/${val}`)
+    }
   return (
-    <Dialog open={open}  fullWidth onClose={_ => setOpen(false)}>
+    <Dialog open={open}  fullWidth onClose={onClose}>
         <DialogTitle>
             <div className='flex gap-2'>
                 <div className='rounded-full bg-green-100 p-2 text-sm font-semibold leading-5 text-green-800'>
@@ -24,16 +30,33 @@ const OptionsModal = (props) => {
         <Divider />
         <DialogContent>
             <ul className='flex flex-col gap-1'>
-                {[...Array(9)].map((_,i) => {
+                {selectedService?.length > 0 ? selectedService.map((x,i) =>{
                     return(
                         <div key={i} className={`${i % 2 === 0 && 'bg-[#f1f0f09d] rounded'}`}>
-                            <MenuItem className='flex gap-2'>
+                            <MenuItem 
+                                onClick={_ => goToFormPage(x.id)}
+                                className='flex gap-2'
+                            >
                                 <AppRegistrationIcon/>
-                                <span>Service option {i+1}</span>
+                                <span>{x?.name}</span>
                             </MenuItem>
                         </div>
                     )
-                })}
+                })
+
+                :
+                    [...Array(9)].map((_,i) => {
+                        return(
+                            <div key={i} className={`${i % 2 === 0 && 'bg-[#f1f0f09d] rounded'}`}>
+                                <MenuItem className='flex gap-2'>
+                                    <AppRegistrationIcon/>
+                                    <span>Service option {i+1}</span>
+                                </MenuItem>
+                            </div>
+                        )
+                    })
+                }
+               
             </ul>
         </DialogContent>
     </Dialog>

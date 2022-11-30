@@ -1,11 +1,3 @@
-
-let password = {
-    hasSixChars: false,
-    hasDigit: false,
-    hasLowercase: false,
-    hasUppercase: false,
-    hasSpecialChar: false,
-}
 export const isValidEmail = (email) => {
     return /\S+@\S+\.\S+/.test(email);
 }

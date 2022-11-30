@@ -8,6 +8,8 @@ import Services from "./pages/landingPage/Services"
 import Dashboard from "./pages/clients/dashboard"
 import Contact from './pages/landingPage/Contact'
 import PageNotFound from "./pages/pageNotFound"
+import Layout from "./pages/clients/layout"
+import BusinessRegistration from "./pages/clients/businessRegistration"
 
 
 import Forms from './pages/Forms/index'
