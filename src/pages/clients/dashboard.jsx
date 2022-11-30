@@ -10,7 +10,7 @@ import FindReplaceIcon from '@mui/icons-material/FindReplace';
 const container = [
   {id: 1, style: 'bg-blue-100 text-blue-600', icon: <BusinessIcon sx={{fontSize: 40}} />, name: "Business Registration", 
     subServices: [
-      {id: 1, name: "Registration of a Comapany with Shares"}
+      {id: 1, name: "Registration of a Company with Shares"}
     ]}, {id: 2, style: 'bg-orange-100 text-orange-600', icon: <BusinessCenterIcon sx={{fontSize: 40}}/>}, 
   {id: 3, style:'bg-gray-100 text-gray-600', image: MarriageIcon},{id: 4, style: 'bg-cyan-100 text-cyan-600', icon: <DriveFileRenameOutlineIcon sx={{fontSize: 40}}/>}, 
   {id: 5, style: 'bg-green-100 text-green-600', icon: <CalculateIcon sx={{fontSize: 40}}/>}, {id: 6, style:'bg-indigo-100 text-indigo-600', icon: <FindReplaceIcon sx={{fontSize: 40}}/> },
