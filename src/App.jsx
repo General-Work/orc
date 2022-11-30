@@ -8,6 +8,8 @@ import Services from "./pages/landingPage/Services"
 import Dashboard from "./pages/clients/dashboard"
 import Contact from './pages/landingPage/Contact'
 import PageNotFound from "./pages/pageNotFound"
+import Forms from './pages/Forms/index'
+import RegisterAcompanyWithShares from './pages/Forms/Register_a_company_with_shares/Index'
 
 export const LoadingContext = createContext()
 
@@ -26,11 +28,15 @@ function App() {
           <Route index path="/" element={<Home/>}/>
           <Route path="/contact" element={<Contact/>} />
           <Route path="/services" element={<Services/>} />
-        </Route>
+       </Route>
         <Route path="/auth"  element={<AppLogin/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="*" element={<PageNotFound/>} />
+        <Route element={<Forms/>}>
+        <Route  path="/forms/registeracompanywithshares" element={<RegisterAcompanyWithShares/>}/>
+        </Route>
       </Routes>
+        
     </LoadingContext.Provider>
   )
 }

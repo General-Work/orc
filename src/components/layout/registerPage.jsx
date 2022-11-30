@@ -36,7 +36,6 @@ const RegisterPage = (props) => {
     const forms = [
         <Details values={values} handleInputChange={handleInputChange} emailError={errors.email}/>, 
         <Account values={values} handleInputChange={handleInputChange} passwordError={errors.password} confirmPasswordError={errors.confirmPassword}/>
-
     ]
 
 
