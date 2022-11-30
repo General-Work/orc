@@ -1,12 +1,13 @@
 import React from 'react'
-import FormNoteInscription from '../../../../components/alerts/FormNoteInscription'
+import FormHelpInscription from '../../../../components/alerts/FormHelpInscription'
+import FormInformativeInscriptions from '../../../../components/alerts/FormInformativeInscriptions';
 import FormInputText from '../../../../components/inputs/FormInputText'
 import TextareaAutosize from '@mui/base/TextareaAutosize';
 
 export default function StepC() {
     return (
         <div>
-            <FormNoteInscription className='my-2'>
+            <FormHelpInscription className='my-2'>
                 ISIC or classification code is a standard
                 classification for economic or business
                 activities so that establishments could
@@ -21,14 +22,14 @@ export default function StepC() {
                         activity and other activities
                     </li>
                 </ul>
-            </FormNoteInscription>
+            </FormHelpInscription>
             <nav className='flex flex-col gap-3'>
             <FormInputText  label='ISIC code 1'size='small'/>
             <FormInputText  label='ISIC code 2'size='small'/>
             <FormInputText  label='ISIC code 3'size='small'/>
             <FormInputText  label='ISIC code 3'size='small'/>
             <nav>
-                <div>If you cannot determine a code, please give a brief description of the company's business activities</div>
+                <FormInformativeInscriptions className='my-2'>If you cannot determine a code, please give a brief description of the company's business activities</FormInformativeInscriptions>
                 <TextareaAutosize maxRows={5} placeholder='enter description here' className='border border-gray-300 rounded-md w-full p-2 focus:outline-blue-500 ' />
             </nav>
             </nav>
