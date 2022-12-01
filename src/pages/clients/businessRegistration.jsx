@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import RegOfComBySharedForm from '../../components/forms/reg_of_com_by_shares/index'
 
 const Forms = {
-  1: <RegOfComBySharedForm/>
+  incoporationofaprivatecompanylimitedbyshares: <RegOfComBySharedForm/>
 }
 
 

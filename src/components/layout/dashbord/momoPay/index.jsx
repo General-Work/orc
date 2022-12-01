@@ -18,7 +18,7 @@ const Index = () => {
         setTimeout(() => {
 
             setLoading(false)
-            navigate(`/businessregistration/${servicePicked}`)
+            navigate(`/businessregistration/${servicePicked?.trim().toLowerCase().replaceAll(' ','')}`)
         }, 600)
     }
   return (

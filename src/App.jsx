@@ -32,7 +32,7 @@ function App() {
         <Route path="/auth"  element={<AppLogin/>}/>
         <Route element={<Layout/>}>
           <Route path="/dashboard" element={<Dashboard/>}/>
-          <Route path="/businessregistration/:id" element={<BusinessRegistration/>}/>
+          <Route path="/entitycreation/:id" element={<BusinessRegistration/>}/>
         </Route>
         <Route path="*" element={<PageNotFound/>} />
         

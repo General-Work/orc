@@ -25,7 +25,7 @@ const OptionsModal = (props) => {
         setSerivePicked(val)
     }
   return (
-    <Dialog open={open}  fullWidth onClose={onClose} maxWidth={selectedService?.length === 16 ? 'md' : 'sm'}>
+    <Dialog open={open}  fullWidth onClose={onClose} maxWidth={selectedService?.length === 16 || selectedService?.length === 13 ? 'md' : 'sm'}>
         <DialogTitle>
             <div className='flex justify-between'>
                 <div className='flex gap-2'>
@@ -51,7 +51,7 @@ const OptionsModal = (props) => {
                         <div key={i} className={`${i % 2 === 0 && 'bg-[#f1f0f09d] rounded'} h-`}>
                             <MenuItem 
                                 // onClick={_ => goToFormPage(x.id)}
-                                onClick={_ => getPayemt(x.id)}
+                                onClick={_ => getPayemt(x.name)}
                                 className='flex gap-2'
                             >
                                 <AppRegistrationIcon/>

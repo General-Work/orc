@@ -24,7 +24,7 @@ const Dashboard = () => {
         </div>
       
         <div className='overflow-y-auto  py-6 mx-4 max-h-full'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14  sm:px-8 md:px-12 lg:px-16 xl:px-32 2xl:px-64'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10  sm:px-8 md:px-12 lg:px-16 xl:px-32 2xl:px-64'>
             {Menus.map((d) => {
               return(
                 <div 

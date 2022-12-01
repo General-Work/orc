@@ -12,11 +12,12 @@ const CardInformation = () => {
     const setLoading = useContext(LoadingContext)
 
     const goToFormPage = () => {
+        // alert(servicePicked?.trim().toLowerCase().replaceAll(' ',''))
         setLoading(true)
         setTimeout(() => {
 
             setLoading(false)
-            navigate(`/businessregistration/${servicePicked}`)
+            navigate(`/entitycreation/${servicePicked?.trim().toLowerCase().replaceAll(' ','')}`)
         }, 600)
     }
 
