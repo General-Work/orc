@@ -9,11 +9,11 @@ const Reg_of_com_by_shares_Form = () => {
   return (
     <>
         <FormHeader>
-          <div className="text-yellow-500 ">
-            <span className='text-base md:text-2xl uppercase font-semibold'>Application to register a company with shares</span>
-            <div className='flex  '>
-                <span>THE COMPANIES ACT, 2019 (ACT 992)</span>
-                <span className='grid justify-center'>FORM 3</span>
+          <div className="text-[#ebe834]">
+            <span className='text-base md:text-2xl uppercase font-semibold backdrop-filter '>Application to register a company with shares</span>
+            <div className='flex  gap-2 font-medium'>
+                <span>THE COMPANIES ACT, 2019 (ACT 992) - </span>
+                <span className='grid justify-center drop-shadow-md shadow-white'>FORM 3</span>
             </div>
             
           </div>

@@ -1,5 +1,5 @@
 import React,{ useState} from 'react'
-import logo from '../../assets/coat-of-arms.png'
+import logo from '../../assets/orc-logo.png'
 import LoginPage from './loginPage'
 import RegisterPage from './registerPage'
 import ActionAlert from '../alerts/actionAlert'
@@ -16,16 +16,16 @@ const AppLogin = () => {
   return (
     <div className='w-screen h-screen  grid items-center justify-center bg-gray-200 '>
 
-            <div className='flex flex-col gap-6'>
+            <div className='flex flex-col gap-3'>
                 <div className='grid justify-center'>
                     <div className='flex flex-col '>
                         <div className="flex justify-center">
-                            <img src={logo} alt='Logo' className='w-28'/>
+                            <img src={logo} alt='Logo' className=''/>
                         </div>
-                        <div className=' flex flex-col text-gray-700 text-2xl uppercase font-bold'>
+                        {/* <div className=' flex flex-col text-gray-700 text-2xl uppercase font-bold'>
                             <span className=''>Office of the Registrar</span>
                             <span className='grid justify-center '>OF COMPANIES</span>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className='rounded-md bg-white shadow-sm border  md:w-[440px]  '>

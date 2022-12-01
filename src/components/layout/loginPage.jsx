@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import LockPersonIcon from '@mui/icons-material/LockPerson';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
 import FormInputPassword from '../inputs/FormInputPassword';
 import ForgotPasswordPage from './forgotPassword/forgotPasswordPage';
 import FormInputText from '../inputs/FormInputText';
+import { LoadingContext } from '../../App';
 
 
 
@@ -13,10 +14,16 @@ const LoginPage = (props) => {
     const {onRegister, setAlert} = props
     const navigate = useNavigate() 
     const [ForgotPassword, setForgotPassword] = useState(false)
+    const setLoading = useContext(LoadingContext)
 
     const Login = async (e) => {
         e.preventDefault()
-        navigate('/dashboard')
+        setLoading(true)
+        setTimeout(() => {
+
+            setLoading(false)
+            navigate('/dashboard')
+        }, 1000)
     }
   return (
     <>

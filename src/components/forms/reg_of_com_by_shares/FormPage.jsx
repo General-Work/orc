@@ -27,8 +27,8 @@ const PageForm = () => {
         
   return (
 
-    <div className=' mx-4 md:mx-32  overflow-y-auto'>
-        <div className='mx-5  mt-10'>
+    <div className=' mx-4 md:mx-32  overflow-y-auto '>
+        <div className='mx-5  py-4'>
             <Stepper activeStep={page} orientation="vertical">
 
                 {stepsList.map((step, index) => (

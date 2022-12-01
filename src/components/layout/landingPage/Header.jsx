@@ -1,6 +1,7 @@
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import image from '../../../assets/COA.png'
+import Bg from '../../../assets/orc-logo-head.png'
 
 import MenuIcon from '@mui/icons-material/Menu';
 export default function Header() {
@@ -10,6 +11,7 @@ const [showDrop, setshowDrop] = useState(false)
    let navdrop = useRef('navdrop')
    let paddednav = useRef('paddednav')
    let favimage = useRef('favimage')
+   const navigate = useNavigate()
 
    useLayoutEffect(() => {
       if (showDrop) {
@@ -41,14 +43,18 @@ const [showDrop, setshowDrop] = useState(false)
       setscrollheight(navdrop.current.scrollHeight)
    }, [])
 
+   const goToLogin = () => {
+      navigate('/auth')
+   }
+
    return (
       <div className=' text-gray-500 sticky top-0 z-50 bg-gray-50/50 backdrop-blur-lg'>
          <div className='relative'>
             <div className='container mx-auto  px-5 '>
                <nav className='flex justify-between items-center transition-[padding] duration-500 ' ref={paddednav} >
-                  <span className='flex gap-5 items-center w-max grow  '>
-                     <img src={image} ref={favimage} alt="" className=' aspect-square h-12 w-14 transition-all duration-500' />
-                     <span className='text-sm'><h3 className='inline text-gray-600 font-semibold'> Office of the Registrar of Companies </h3></span>
+                  <span className='flex gap-3 items-center w-max grow  '>
+                     <img src={Bg} ref={favimage} alt="" className=' aspect-square h-12 w-14 transition-all duration-500' />
+                     <span className='text-sm'><h3 className='inline text-gray-600 font-medium text-base'> Office of the Registrar of Companies </h3></span>
                   </span>
                   <span className='inline md:hidden'>
                      <MenuIcon className='cursor-pointer' onClick={()=>setshowDrop(!showDrop)} />
@@ -64,8 +70,8 @@ const [showDrop, setshowDrop] = useState(false)
                         <NavLink to='/services' className={({ isActive }) =>
                          isActive ? ' text-blue-600 hover:text-blue-600 inline-block duration-200 py-5 px-4 ' : ' hover:text-blue-600 inline-block duration-200 py-5 px-4'
                         }>services</NavLink>
-                        <button className='p-2 md:ml-3 lg:ml-10 rounded-lg px-5 text-sm '>Login</button>
-                        <button className='p-2 ml-3 rounded-lg px-5 bg-blue-600 text-sm text-white'>sign up</button>
+                        <button onClick={goToLogin} className='p-2 md:ml-3 lg:ml-10 rounded-lg px-5 text-sm '>Login</button>
+                        <button onClick={goToLogin} className='p-2 ml-3 rounded-lg px-5 bg-blue-600 text-sm text-white'>sign up</button>
 
                      </div>
                   </div>
