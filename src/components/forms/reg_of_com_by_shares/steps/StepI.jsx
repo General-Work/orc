@@ -25,6 +25,7 @@ export default function StepI() {
                 <FormInputText size='small' type='text' required className='w-full' label='Email Address' />
                 <FormInputText size='small' type='text' className='w-full' label='Website' />
             </div>
+            
 
         </div>
     )

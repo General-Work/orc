@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-import FormHelpInscription from '../../../alerts/FormHelpInscription'
-// import TextareaAutosize from '@mui/base/TextareaAutosize';
+import FormHelpInscription from '../../../../components/alerts/FormHelpInscription'
+import TextareaAutosize from '@mui/base/TextareaAutosize';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
-import FileUpload from '../../../inputs/FileUpload';
-import FormInputSelect from '../../../inputs/FormInputSelect';
-import FormInputText from '../../../inputs/FormInputText';
-import FormInputDate from '../../../inputs/FormInputDate';
-import FormInformativeInscriptions from '../../../alerts/FormInformativeInscriptions';
+import FormInputSelect from '../../../../components/inputs/FormInputSelect';
+import FormInputText from '../../../../components/inputs/FormInputText';
+import FormInputDate from '../../../../components/inputs/FormInputDate';
+import FormInformativeInscriptions from '../../../../components/alerts/FormInformativeInscriptions';
 import { useLocationForm } from './StepE';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import Tooltip from '@mui/material/Tooltip';
@@ -49,7 +48,7 @@ export default function StepJ() {
             </nav>
         </div>
     }
-    
+
     function TickWithDetailsandDoc(props) {
         const [selected, setSelected] = useState('no')
         let handleSelect = (e) => {
@@ -73,8 +72,19 @@ export default function StepJ() {
             </nav>
             {
                 selected === 'yes' && <section>
-                    <FormInputText maxRows={3} multiline label='Provide details if yes' className='border border-gray-300 rounded-md w-full p-2 focus:outline-blue-500 ' />
-                    <FileUpload label='Upload Document supporing documents'/>
+                    <TextareaAutosize maxRows={5} placeholder='provide details if yes' className='border border-gray-300 rounded-md w-full p-2 focus:outline-blue-500 ' />
+                    <div className="overflow-hidden relative w-full mt-1 rounded-md ">
+                        <button className="bg-blue-400 hover:bg-blue-light text-white font-bold py-2 px-4 w-full inline-flex items-center">
+                            <FileUploadIcon />
+                            <span className="ml-2 text-sm font-normal">Upload Document supporing documents</span>
+                        </button>
+                        <input
+                            className="cursor-pointer absolute block py-2 px-4 w-full opacity-0 pin-r pin-t"
+                            type="file"
+                            name="documents[]"
+                            accept="image/*"
+                        />
+                    </div>
                 </section>
             }
         </div>
