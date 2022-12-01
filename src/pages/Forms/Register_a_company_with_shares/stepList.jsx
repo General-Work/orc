@@ -5,6 +5,9 @@ import StepD from './steps/StepD'
 import StepE from './steps/StepE'
 import StepF from './steps/StepF'
 import StepG from './steps/StepG'
+import StepH from './steps/StepH'
+import StepI from './steps/StepI'
+import StepJ from './steps/StepJ'
 const steps = [
     {
       label: 'Select Constitution',
@@ -39,6 +42,21 @@ const steps = [
       label: 'Other Place of Business',
 
       component: StepG
+    },
+    {
+      label: 'Address of which Register of Members will be kept and maintained (if elsewhere than at the Registered Office)',
+
+      component: StepH
+    },
+    {
+      label: 'Contact of the Company',
+
+      component: StepI
+    },
+    {
+      label: 'Particulars of Directors of Company',
+
+      component: StepJ
     },
   ];
 

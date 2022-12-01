@@ -12,7 +12,7 @@ import steps from './stepList';
 
 
 export default function Index() { 
-  const [activeStep, setActiveStep] = useState(0);
+  const [activeStep, setActiveStep] = useState(steps.length-1);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -42,7 +42,7 @@ export default function Index() {
           >
             {step.label}
           </StepLabel>
-          <StepContent TransitionProps={{ unmountOnExit: false }}>
+          <StepContent TransitionProps={{ unmountOnExit: true }}>
             <Box sx={{ mb: 2 }}>
               <div>
                 <div>
