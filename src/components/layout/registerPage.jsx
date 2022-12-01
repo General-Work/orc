@@ -105,7 +105,7 @@ const RegisterPage = (props) => {
                         className='bg-[#1976D2] hover:bg-blue-800 text-white rounded-full w-6 h-6 '
                         onClick={_ => setLogin(true)}
                         >
-                        <KeyboardArrowLeft sx={{fontSize: 20}} className="-mt-1 mr-0.5"/> 
+                        <KeyboardArrowLeft sx={{fontSize: 20}} className="-mt-0.5 mr-0.5"/> 
                     </button>
                 </Tooltip>   
             </div>

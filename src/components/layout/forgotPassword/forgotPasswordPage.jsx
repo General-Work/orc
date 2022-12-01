@@ -12,7 +12,7 @@ import { useForm } from '../../inputs/useForm';
 import { isValidEmail, isValidPassword } from '../../lib/inputValidations';
 import { LoadingContext } from '../../../App';
 import Zoom from '@mui/material/Zoom';
-import IconButton from '@mui/material/IconButton';
+
 
 
 const formValues = {
@@ -105,7 +105,7 @@ const ForgotPasswordPage = (props) => {
                         onClick={_ => setForgotPassword(false)}
                         className='bg-[#1976D2] hover:bg-blue-800 text-white rounded-full w-6 h-6 '
                     >
-                        <KeyboardArrowLeft sx={{fontSize: 20}} className="-mt-1 mr-0.5"/> 
+                        <KeyboardArrowLeft sx={{fontSize: 20}} className="-mt-0.5 mr-0.5"/> 
                     </button>
                 </Tooltip>   
             </div>

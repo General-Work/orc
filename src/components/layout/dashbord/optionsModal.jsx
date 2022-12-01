@@ -23,7 +23,7 @@ const OptionsModal = (props) => {
                     <AddTaskIcon />
                 </div>
                 <span className='mt-2 text-lg font-semibold text-gray-800'>
-                    Kindly select from the options below
+                    Select from the services below
                 </span>
             </div>
         </DialogTitle>

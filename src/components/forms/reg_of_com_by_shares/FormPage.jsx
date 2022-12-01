@@ -27,7 +27,7 @@ const PageForm = () => {
         
   return (
 
-    <div className='  mx-32  overflow-y-auto'>
+    <div className=' mx-4 md:mx-32  overflow-y-auto'>
         <div className='mx-5  mt-10'>
             <Stepper activeStep={page} orientation="vertical">
 
@@ -45,27 +45,27 @@ const PageForm = () => {
                     </StepLabel>
                     <StepContent TransitionProps={{ unmountOnExit: false }}>
                 
-                        <div>
-                        <div>
-                            <step.component />
-                        </div>
+                        <div className='md:mx-10'>
+                            <div>
+                                <step.component />
+                            </div>
 
-                        <Button
-                            size ='small'
-                            variant="contained"
-                            onClick={handleNext}
-                            sx={{ mt: 5, mr: 3,  }}
-                        >
-                            {index === step.length - 1 ? 'Finish' : 'Continue'}
-                        </Button>
-                        <Button
-                            size ='small'
-                            disabled={index === 0}
-                            onClick={handlePrev}
-                            sx={{ mt: 5, mr: 3 }}
-                        >
-                            Back
-                        </Button>
+                            <Button
+                                size ='small'
+                                variant="contained"
+                                onClick={handleNext}
+                                sx={{ mt: 5, mr: 3,  }}
+                            >
+                                {index === step.length - 1 ? 'Finish' : 'Continue'}
+                            </Button>
+                            <Button
+                                size ='small'
+                                disabled={index === 0}
+                                onClick={handlePrev}
+                                sx={{ mt: 5, mr: 3 }}
+                            >
+                                Back
+                            </Button>
                         </div>
                 
                     </StepContent>
