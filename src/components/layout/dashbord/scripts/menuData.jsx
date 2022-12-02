@@ -23,10 +23,10 @@ const Menus = [
     desc: 'A range of ORC services related to formation of companies, sole proprietorship, partnership, etc.',
       subServices: [
         {id: 1, name: "Incoporation of a private company limited by shares"},
-        {id: 2, name: "Incoporation of a pulic company limited by shares"},
+        {id: 2, name: "Incoporation of a public company limited by shares"},
         {id: 3, name: 'Incoporation of a private company unlimited by shares'},
         {id: 4, name: 'Incoporation of a private company limited by guarantee'},
-        {id: 5, name: 'Incoporation of a pulic company limited by guarantee'},
+        {id: 5, name: 'Incoporation of a public company limited by guarantee'},
         {id: 6, name: 'Incoporation of an unlimited public company'},
         {id: 7, name: 'Incoporation of a private partnership'},
         {id: 8, name: 'Incoporation of a professional body'},
@@ -125,14 +125,14 @@ const Menus = [
          
         ]
     },
-    {id: 9, style:'bg-blue-100 text-blue-600', icon: <FilterNoneIcon sx={{fontSize: 32}} />, name: "Peridic Fillings", 
-      desc: 'Make periodic fillings',
+    {id: 9, style:'bg-blue-100 text-blue-600', icon: <FilterNoneIcon sx={{fontSize: 32}} />, name: "Periodic Filings", 
+      desc: 'Make periodic filings',
         subServices: [
-          {id: 1, name: 'Filling an annual return by a company'},
-          {id: 2, name: 'Filling an annual renewal by sole proprietor'},
-          {id: 4, name: 'Filling an Annual Return by a Company'},
-          {id: 5, name: 'Filling of annual by subsidiary business name'},
-          {id: 6, name: 'Filling of a financial statement by a professional body'},
+          {id: 1, name: 'Filing an annual return by a company'},
+          {id: 2, name: 'Filing an annual renewal by sole proprietor'},
+          {id: 4, name: 'Filing an Annual Return by a Company'},
+          {id: 5, name: 'Filing of annual by subsidiary business name'},
+          {id: 6, name: 'Filing of a financial statement by a professional body'},
           {id: 7, name: 'Access to certified copy of a document'},
 
          
