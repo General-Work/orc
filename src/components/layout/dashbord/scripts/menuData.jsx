@@ -6,6 +6,7 @@ import LayersIcon from '@mui/icons-material/Layers';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import FilterNoneIcon from '@mui/icons-material/FilterNone';
+import BusinessIcon from '@mui/icons-material/Business';
 
 
 const Menus = [
@@ -105,7 +106,7 @@ const Menus = [
            {id: 7, name: 'Discharge of debentures and charges for a private partnership'},
           ]
       },
-      {id: 8, style:'bg-gray-100 text-gray-600', icon: <CreditCardIcon sx={{fontSize: 40}} />, name: "Dissolution and Restoration", 
+      {id: 8, style:'bg-gray-100 text-gray-600', icon: <BusinessIcon   sx={{fontSize: 40}} />, name: "Dissolution and Restoration", 
       desc: 'Register dissolution and restoration',
         subServices: [
          {id: 1, name: 'Administrative cancellation of a sole proprietorship'},
@@ -124,11 +125,16 @@ const Menus = [
          
         ]
     },
-    {id: 9, style:'bg-blue-100 text-blue-600', icon: <FilterNoneIcon sx={{fontSize: 40}} />, name: "Peridic Fillings", 
+    {id: 9, style:'bg-blue-100 text-blue-600', icon: <FilterNoneIcon sx={{fontSize: 32}} />, name: "Peridic Fillings", 
       desc: 'Make periodic fillings',
         subServices: [
-          {id: 1, name: 'Filling an Annual Return by a Company'},
-        
+          {id: 1, name: 'Filling an annual return by a company'},
+          {id: 2, name: 'Filling an annual renewal by sole proprietor'},
+          {id: 4, name: 'Filling an Annual Return by a Company'},
+          {id: 5, name: 'Filling of annual by subsidiary business name'},
+          {id: 6, name: 'Filling of a financial statement by a professional body'},
+          {id: 7, name: 'Access to certified copy of a document'},
+
          
         ]
     }

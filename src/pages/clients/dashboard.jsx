@@ -30,7 +30,7 @@ const Dashboard = () => {
                 <div 
                   key={d.id} 
                   onClick={_ => getSelectedService(d.subServices)}
-                  className='rounded-md shadow-md p-10 bg-white cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 md:hover:scale-110 duration-300'
+                  className='rounded-md shadow-md p-10 bg-white cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 md:hover:scale-110 duration-300 min-h-72 '
                   >
                     <div className=''>
                       <div className='grid justify-center  mb-5'>
