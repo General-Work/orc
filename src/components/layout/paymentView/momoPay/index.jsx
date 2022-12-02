@@ -1,24 +1,31 @@
 import React, { useContext } from 'react'
 import FormInputText from '../../../inputs/FormInputText'
 import FormInputSelect from '../../../inputs/FormInputSelect'
-import { ServicePickedContext } from '../optionsModal';
+// import { ServicePickedContext } from '../optionsModal';
 import { LoadingContext } from '../../../../App';
+import { AlertContext } from '../../../../pages/clients/layout';
 import FormLabel from '@mui/material/FormLabel'
 import { useNavigate } from 'react-router-dom';
 
 const networkServices = [{value: 'MTN', name: "MTN"}, {value: "vodafone", name: 'Vodafone'}, {value: "Airtel/Tigo", name: 'Airtel / Tigo'}]
 
-const Index = () => {
+const Index = (props) => {
+    const {hideMomoPay} = props
     const setLoading = useContext(LoadingContext)
-    const servicePicked = useContext(ServicePickedContext)
-    const navigate = useNavigate()
+    const setAlert = useContext(AlertContext)
+ 
 
-    const goToFormPage = () => {
+    const makePayment = () => {
         setLoading(true)
         setTimeout(() => {
 
             setLoading(false)
-            navigate(`/businessregistration/${servicePicked?.trim().toLowerCase().replaceAll(' ','')}`)
+            setAlert({
+                open: true,
+                text: 'Successfully made payment for application',
+                status: 'success'
+            })
+            hideMomoPay()
         }, 600)
     }
   return (
@@ -41,7 +48,7 @@ const Index = () => {
             <FormLabel>Enter amount to be paid</FormLabel>
             <FormInputText label="Amount"/>
         </div>
-        <button onClick={goToFormPage} className='bg-blue-600 text-white  rounded-md justify-center p-3 w-full mb-4 mt-6 hover:bg-blue-800'>
+        <button onClick={makePayment} className='bg-blue-600 text-white  rounded-md justify-center p-3 w-full mb-4 mt-6 hover:bg-blue-800'>
                 Pay Now
             </button>
 

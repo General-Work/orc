@@ -3,21 +3,27 @@ import { useNavigate } from 'react-router-dom';
 import CardLogo from '../../../../assets/card-logo.png'
 import VerifiedIcon from '@mui/icons-material/Verified';
 import DialpadIcon from '@mui/icons-material/Dialpad';
-import { ServicePickedContext } from '../optionsModal';
+// import { ServicePickedContext } from '../../dashbord/optionsModal';
 import { LoadingContext } from '../../../../App';
+import { AlertContext } from '../../../../pages/clients/layout';
 
-const CardInformation = () => {
-    const servicePicked = useContext(ServicePickedContext)
-    const navigate = useNavigate()
+const CardInformation = (props) => {
+    const {hideCardPay} = props
     const setLoading = useContext(LoadingContext)
+    const setAlert = useContext(AlertContext)
+ 
 
-    const goToFormPage = () => {
-        // alert(servicePicked?.trim().toLowerCase().replaceAll(' ',''))
+    const makePayment = () => {
         setLoading(true)
         setTimeout(() => {
 
             setLoading(false)
-            navigate(`/entitycreation/${servicePicked?.trim().toLowerCase().replaceAll(' ','')}`)
+            setAlert({
+                open: true,
+                text: 'Successfully made payment for application',
+                status: 'success'
+            })
+            hideCardPay()
         }, 600)
     }
 
@@ -97,7 +103,7 @@ const CardInformation = () => {
                 </div>
             </div>
 
-            <button onClick={goToFormPage} className='bg-blue-600 text-white  rounded-md justify-center p-3 w-full mb-4 mt-6'>
+            <button onClick={makePayment} className='bg-blue-600 text-white  rounded-md justify-center p-3 w-full mb-4 mt-6'>
                 Pay Now
             </button>
            

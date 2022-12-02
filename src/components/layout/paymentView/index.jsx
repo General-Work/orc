@@ -10,8 +10,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import FormLabel from '@mui/material/FormLabel'
 import CardPaymentView from "./creditCard/index"
 
-
-const Payment = (props) => {
+const Index = (props) => {
     const {paymentOpen, paymentClose} = props
     const [selectedMode, setSelectedMode] = useState('')
     const [cardInfo, setCardInfo] = useState(false)
@@ -39,9 +38,7 @@ const Payment = (props) => {
                     </IconButton>
                 </div>
 
-            </div>
-
-            
+            </div>            
         </DialogTitle>
         <Divider/>
         <DialogContent>
@@ -53,13 +50,13 @@ const Payment = (props) => {
             </div>
             <PaymentContent1 onChange={handleRadioChange} value={selectedMode}/>
         </DialogContent>
-      
-      <CardPaymentView cardInfo={cardInfo} selectedMode={selectedMode} onClose={_ => {
+    
+    <CardPaymentView cardInfo={cardInfo} selectedMode={selectedMode} onClose={_ => {
         setSelectedMode('')
         setCardInfo(false)
-      }}/>
+    }}/>
     </Dialog>
   )
 }
 
-export default Payment
+export default Index

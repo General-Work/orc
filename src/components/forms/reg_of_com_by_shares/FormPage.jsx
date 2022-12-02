@@ -6,14 +6,15 @@ import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 // import FormInputComponent from './formInputComponent';
 import StepContent from '@mui/material/StepContent';
-import stepsList from './stepList' 
+import stepsList from './stepList'
+import Payment from '../../layout/paymentView/index' 
 
 
 
 const PageForm = () => {
     const {page, setPage, data, setData} = useFormContext()
     const [completed, setCompleted] = useState({});
-
+    const [paymentOpen, setPaymentOpen] = useState(false)
    
     const handlePrev = () => {
       setPage((prev) => prev - 1);
@@ -29,7 +30,7 @@ const PageForm = () => {
 
     <div className=' mx-4 md:mx-32  overflow-y-auto '>
         <div className='mx-5  py-4'>
-            <Stepper activeStep={page} orientation="vertical">
+            <Stepper activeStep={page}  orientation="vertical">
 
                 {stepsList.map((step, index) => (
                 <Step key={step.label} >
@@ -56,7 +57,7 @@ const PageForm = () => {
                                 onClick={handleNext}
                                 sx={{ mt: 5, mr: 3,  }}
                             >
-                                {index === step.length - 1 ? 'Finish' : 'Continue'}
+                                {index === stepsList.length - 1 ? 'Finish' : 'Continue'}
                             </Button>
                             <Button
                                 size ='small'
@@ -72,6 +73,22 @@ const PageForm = () => {
                 </Step>
                 ))}
             </Stepper>
+            {page === stepsList.length && (
+                <div className='my-4'>
+                    <div className='font-semibold  text-red-600'>Make payment for application</div>
+                    <button onClick={_ => setPaymentOpen(true)} className='bg-green-500 hover:bg-green-800 text-white rounded-md p-2 my-3'>
+                        Payment
+                    </button>
+                </div>
+            )}
+
+            {paymentOpen && 
+                <Payment 
+                    paymentOpen={paymentOpen}
+                    paymentClose={_ => setPaymentOpen(false)}
+                />
+            }
+
             
         </div>
     

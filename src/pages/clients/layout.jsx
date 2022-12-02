@@ -1,14 +1,21 @@
-import React, {useState} from 'react'
+import React, {useState, createContext} from 'react'
 import PageHeader from '../../components/layout/dashbord/pageHeader'
 import {Outlet} from 'react-router-dom'
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import IconButton from '@mui/material/IconButton';
 import SideModal from '../../components/layout/sideModal'
 import ChatPage from '../../components/chatPage/index'
+import ActionAlert from '../../components/alerts/actionAlert';
 
+export const AlertContext = createContext()
 
 const Layout = () => {
   const [showChat, setShowChat] = useState(false)
+  const [alert, setAlert] = useState({
+    open: false,
+    status: '',
+    text: ''
+})
   
   const getChatView = () => {
     setShowChat(true)
@@ -19,7 +26,10 @@ const Layout = () => {
         <PageHeader/>
 
         <div className='h-[680px]'>
-            <Outlet />
+          <AlertContext.Provider value={setAlert}>
+              <ActionAlert open={alert.open} text={alert.text} close={_=>setAlert({...alert, open:false})}  status={alert.status}/>
+                <Outlet/>
+            </AlertContext.Provider>
         </div>
       </div>
 

@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useContext, useState } from 'react'
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import Divider from '@mui/material/Divider';
@@ -7,22 +7,26 @@ import { MenuItem } from '@mui/material';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import AddTaskIcon from '@mui/icons-material/AddTask';
 import { useNavigate } from 'react-router-dom';
-import Payment from './payment'
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
+import { LoadingContext } from '../../../App';
 
 export const ServicePickedContext = createContext()
 
 const OptionsModal = (props) => {
     const {open, selectedService, onClose} = props
-    const [paymentOpen, setPaymentOpen] = useState(false)
-    const [servicePicked, setSerivePicked] = useState(null)
+    const setLoading = useContext(LoadingContext)
+    const navigate = useNavigate()
 
     
 
     const getPayemt = (val) => {
-        setPaymentOpen(true)
-        setSerivePicked(val)
+        setLoading(true)
+        setTimeout(() => {
+
+            navigate(`/entitycreation/${val?.trim().toLowerCase().replaceAll(' ','')}`)
+            setLoading(false)
+        }, 600)
     }
   return (
     <Dialog open={open}  fullWidth onClose={onClose} maxWidth={selectedService?.length === 16 || selectedService?.length === 13 ? 'md' : 'sm'}>
@@ -46,11 +50,11 @@ const OptionsModal = (props) => {
         <Divider />
         <DialogContent className='mb-10'>
             <ul className='flex flex-col gap-1 max-h-96 '>
-                {selectedService?.length > 0 ? selectedService.map((x,i) =>{
+                {selectedService?.length > 0 && selectedService.map((x,i) =>{
                     return(
                         <div key={i} className={`${i % 2 === 0 && 'bg-[#f1f0f09d] rounded'} h-`}>
                             <MenuItem 
-                                // onClick={_ => goToFormPage(x.id)}
+                               
                                 onClick={_ => getPayemt(x.name)}
                                 className='flex gap-2'
                             >
@@ -60,23 +64,11 @@ const OptionsModal = (props) => {
                         </div>
                     )
                 })
-
-                :
-                    [...Array(9)].map((_,i) => {
-                        return(
-                            <div key={i} className={`${i % 2 === 0 && 'bg-[#f1f0f09d] rounded'}`}>
-                                <MenuItem className='flex gap-2'>
-                                    <AppRegistrationIcon/>
-                                    <span>Service option {i+1}</span>
-                                </MenuItem>
-                            </div>
-                        )
-                    })
                 }
-               
+
             </ul>
         </DialogContent>
-        <ServicePickedContext.Provider value={servicePicked}>
+        {/* <ServicePickedContext.Provider value={servicePicked}>
             <Payment
                 paymentOpen={paymentOpen} 
                 paymentClose={_ => {
@@ -85,7 +77,7 @@ const OptionsModal = (props) => {
                 }}    
             />
 
-        </ServicePickedContext.Provider>
+        </ServicePickedContext.Provider> */}
     </Dialog>
   )
 }

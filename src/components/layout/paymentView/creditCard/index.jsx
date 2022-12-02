@@ -34,14 +34,14 @@ const Index = (props) => {
         {selectedMode !== 'momo pay' ? 
           <div className='grid grid-cols-7 gap-3'>
             <div className='col-span-4'>
-              <CardInformation />
+              <CardInformation hideCardPay={onClose}/>
             </div>
             <div className="col-span-3 bg-blue-50">
               <AmountToPay/>
             </div>
           </div>
         :
-          <MomoPayView />
+          <MomoPayView hideMomoPay={onClose}/>
         }
       </DialogContent>
       
