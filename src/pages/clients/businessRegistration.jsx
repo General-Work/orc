@@ -26,10 +26,8 @@ const Forms = {
   registraionofasubsidiary: <Registraionofasubsidiary/>
 }
 
-
 const BusinessRegistration = () => {
   const params = useParams()
-  
   return (
     <div>
       {params?.id in Forms ? 
