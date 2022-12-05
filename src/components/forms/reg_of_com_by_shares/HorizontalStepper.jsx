@@ -119,6 +119,7 @@ export default function HorizontalNonLinearStepper() {
                   {i === activeStep && < step.component />}
                 </nav>)}
               </div>
+              
             <div className=' h-full'>
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
               <Button
