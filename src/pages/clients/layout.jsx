@@ -21,19 +21,19 @@ const Layout = () => {
     setShowChat(true)
   }
   return (
-    <div className='bg-gray-200 w-screen h-screen  '>
+    <div className='bg-gray-200 w-screen h-max  '>
       <div className='flex flex-col'>
         <PageHeader/>
 
-        <div className='h-[680px]'>
+        <div className='h-full'>
           <AlertContext.Provider value={setAlert}>
               <ActionAlert open={alert.open} text={alert.text} close={_=>setAlert({...alert, open:false})}  status={alert.status}/>
-                <Outlet/>
+              <Outlet/>
             </AlertContext.Provider>
         </div>
       </div>
 
-        <div className='absolute right-3 bottom-3 z-30'>
+        <div className='fixed right-3 bottom-3 z-30'>
           <div className='relative'>
             <IconButton onClick={getChatView}>
               <div className='rounded-full bg-green-800 text-white shadow-md z-[1000px]  text-sm font-semibold leading-5  p-3'>

@@ -20,6 +20,7 @@ import StepU from './steps/StepU'
 import StepV from './steps/StepV'
 import StepW from './steps/StepW'
 import StepX from './steps/StepX'
+
 const steps = [
     {
       label: 'Select Constitution',
@@ -130,6 +131,7 @@ const steps = [
 
       component: StepX
     },
+    
   ];
 
   export default steps;

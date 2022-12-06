@@ -19,7 +19,7 @@ const PageHeader = () => {
     }
 
   return (
-    <nav className="bg-white  shadow-md backdrop-filter backdrop-blur-lg  ">
+    <nav className="bg-white  shadow-md backdrop-filter backdrop-blur-lg sticky z-40 top-0  ">
         <div className=" mx-4 sm:mx-8 ">
             <div className="relative flex items-center justify-between">
                 <div className='flex justify-between items-center  py-1.5' >

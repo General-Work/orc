@@ -20,6 +20,9 @@ import StepU from './steps/StepU'
 import StepV from './steps/StepV'
 import StepW from './steps/StepW'
 import StepX from './steps/StepX'
+import MakePayment from './steps/MakePayment'
+
+
 const steps = [
     {
       label: 'Select Constitution',
@@ -129,6 +132,11 @@ const steps = [
       label: 'Business Operating Permit (BOP) Request',
 
       component: StepX
+    },
+    {
+      label: 'Make Payment',
+
+      component: MakePayment
     },
   ];
 

@@ -8,8 +8,8 @@ const SideModal = (props) => {
   return (
     <Slide direction="left" in={true} mountOnEnter unmountOnExit>
 
-      <div aria-live="assertive" className="pointer-events-none absolute right-0 bottom-0 top-[54px] flex items-end place-content-end sm:items-start z-30  ">
-          <div className="flex flex-col flex-grow pointer-events-none max-w-md h-full shadow-lg " 
+      <div aria-live="assertive" className="pointer-events-none fixed w-full inset-0 z-40 md:right-0 md:bottom-0 md:top-[54px] flex items-end place-content-end sm:items-start   ">
+          <div className="flex flex-col flex-grow pointer-events-none w-full md:max-w-md h-full shadow-lg " 
           >
               {/* <div className="h-[63px]" >&nbsp;</div> */}
               <div className="pointer-events-auto flex-grow overflow-y-hidden bg-white flex flex-col shadow-lg ">
