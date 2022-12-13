@@ -68,16 +68,7 @@ const OptionsModal = (props) => {
 
             </ul>
         </DialogContent>
-        {/* <ServicePickedContext.Provider value={servicePicked}>
-            <Payment
-                paymentOpen={paymentOpen} 
-                paymentClose={_ => {
-                    setPaymentOpen(false)
-                    servicePicked(null)
-                }}    
-            />
-
-        </ServicePickedContext.Provider> */}
+      
     </Dialog>
   )
 }

@@ -13,7 +13,7 @@ const Menus = [
     {id: 1, name: 'Search and Name Reservation', icon: <SearchIcon sx={{fontSize: 40}}/>, style: 'bg-blue-100 text-blue-600', 
       desc: 'Conduct a business name search, as well as entity name reservation.',
       subServices: [
-        {id: 1, name:'Basic name search'},
+        {id: 1, name:'Basic name search '},
         {id: 2, name:'Business entity information search process'}, 
         {id: 3, name:'Basic reservation'}
       ]

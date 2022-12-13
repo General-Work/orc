@@ -3,12 +3,14 @@ import PageForm from "./FormPage"
 import FormHeader from '../../layout/FormHeader'
 import FormProvider from './hooks/FormContext'
 
-const Index = () => {
+
+
+const Reg_of_com_by_shares_Form = () => {
   return (
     <>
         <FormHeader>
           <div className="text-[#ebe834]">
-            <span className='text-base md:text-2xl uppercase font-semibold backdrop-filter '>Incoporation of an unlimited public company</span>
+            <span className='text-base md:text-2xl uppercase font-semibold backdrop-filter '>Registration of an external (foreign comapny)</span>
             <div className='flex  gap-2 font-medium'>
                 <span>THE COMPANIES ACT, 2019 (ACT 992) - </span>
                 <span className='grid justify-center drop-shadow-md shadow-white'>FORM 3</span>
@@ -16,8 +18,8 @@ const Index = () => {
             
           </div>
         </FormHeader>
-        <div className="absolute px-4 md:px-10 ">
-          <div className="relative bottom-12  rounded-md bg-white overflow-y-auto h-[670px]">
+        <div className="container  mx-auto transform translate-y-[-50px]">
+          <div className=" p-5 rounded-md bg-white h-max min-h-screen">
             <FormProvider>
               <PageForm/>
             </FormProvider>
@@ -27,4 +29,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default Reg_of_com_by_shares_Form

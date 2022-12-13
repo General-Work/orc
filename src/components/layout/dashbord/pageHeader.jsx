@@ -27,6 +27,12 @@ const PageHeader = () => {
                         <img src={Logo} alt="" className=' aspect-square h-10 w-10 cursor-pointer' onClick={_ => navigate('/dashboard')}/>
                         <span className='text-sm hidden sm:block font-semibold text-gray-700'> Office of the Registrar of Companies </span>
                     </span>
+                    <button 
+                        onClick={_ => navigate('/dashboard')}
+                        className='ml-4 py-1 px-3 rounded-[5px] text-white bg-blue-800 hover:bg-blue-900'
+                    >
+                            Home
+                    </button>
                 </div>
                <div className="ml-4 flex items-center md:ml-6">
                     <div className='relative '>
